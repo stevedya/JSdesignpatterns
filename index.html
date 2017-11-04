@@ -19,7 +19,7 @@
             <h3>Navigation</h3>
             <nav>
                 <ul class="nav flex-column">
-                    <li class="nav-link"><a href="#constructor" class="nav-link text-white"><strong>About
+                    <li class="nav-link"><a href="#about" class="nav-link text-white"><strong>About
                         Patterns</strong></a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-white"> 1.0 - What are Patterns</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-white"> 1.1 - Design patterns in
@@ -38,37 +38,47 @@
                 <h1 class="display-3 text-white">Design Patterns</h1>
                 <p class="lead text-white">A easy guide to design patterns in JavaScript</p>
             </div>
-            <div class="px-2">
-                <hr>
-                <h2> What are patterns</h2>
-                <p>Patterns are tried and tested reusable techniques that assist in solving common programming problems.
-                    The patterns are rigorously tested and analyzed by developers to ensure they are a trusted solution.
-                    They must, at a minimum, meet these three requirements: fitness of purpose, usefulness and
-                    applicability to be considered valid (Addy Osmani, 2017). Although patterns are not
-                    one-size-fits-all, they help create efficient and reliable solutions based on proven
-                    techniques. </p>
-                <h2>Design patterns in JavaScript</h2>
-                <p>Design patterns are utilized everyday in JavaScript and JavaScript libraries. You may not have
-                    realized it but many programming languages, including JavaScript and jQuery, have design patterns
-                    already built-in. We use patterns in DOM selectors, even though
-                    document.getElementByClassname(“.item”) is more efficient in the browser, we still lean heavier
-                    towards the jQuery library where we can select the same item by writing $(“.item”). Design patterns
-                    in JavaScript are typically used in large-scale applications but can assist programs of any size in
-                    solving common issues and creating readable, reliable and maintainable code.</p>
-                <h2>The history and importance of design patterns</h2>
-                <p>Design patterns in programming have been used since the creation of the programming industry. The
-                    techniques were based on the work of architect Christopher Alexander and became widely known and
-                    accepted after a now iconic publication about design patterns for software engineering in 1995.
-                    Design patterns are important because they can be used on recurring problems in application
-                    development making the program more efficient. They are also important because they bring “method to
-                    the madness”. Design Patterns are trusted, reliable solutions that also assist in creating
-                    meaningful conversations between developers.</p>
-            </div>
+            <section id="about">
+                <div class="px-2">
+                    <hr>
+                    <h2> What are patterns</h2>
+                    <p>Patterns are tried and tested reusable techniques that assist in solving common programming
+                        problems.
+                        The patterns are rigorously tested and analyzed by developers to ensure they are a trusted
+                        solution.
+                        They must, at a minimum, meet these three requirements: fitness of purpose, usefulness and
+                        applicability to be considered valid (Addy Osmani, 2017). Although patterns are not
+                        one-size-fits-all, they help create efficient and reliable solutions based on proven
+                        techniques. </p>
+                    <h2>Design patterns in JavaScript</h2>
+                    <p>Design patterns are utilized everyday in JavaScript and JavaScript libraries. You may not have
+                        realized it but many programming languages, including JavaScript and jQuery, have design
+                        patterns
+                        already built-in. We use patterns in DOM selectors, even though
+                        document.getElementByClassname(“.item”) is more efficient in the browser, we still lean heavier
+                        towards the jQuery library where we can select the same item by writing $(“.item”). Design
+                        patterns
+                        in JavaScript are typically used in large-scale applications but can assist programs of any size
+                        in
+                        solving common issues and creating readable, reliable and maintainable code.</p>
+                    <h2>The history and importance of design patterns</h2>
+                    <p>Design patterns in programming have been used since the creation of the programming industry. The
+                        techniques were based on the work of architect Christopher Alexander and became widely known and
+                        accepted after a now iconic publication about design patterns for software engineering in 1995.
+                        Design patterns are important because they can be used on recurring problems in application
+                        development making the program more efficient. They are also important because they bring
+                        “method to
+                        the madness”. Design Patterns are trusted, reliable solutions that also assist in creating
+                        meaningful conversations between developers.</p>
+                </div>
+            </section>
+
             <section id="constructor" class="design-pattern mt-5 mb-5">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="display-4">Constructor Pattern</h2><hr>
+                            <h2 class="display-4">Constructor Pattern</h2>
+                            <hr>
                             <p><strong>Category:</strong> Creational + Builder</p>
                             <p><strong>Creator:</strong> Richard Cornford and others</p>
                             <h3>What it is used for</h3>
@@ -96,7 +106,8 @@
                                         <li>Widely known pattern makes it easy for other developers to understand</li>
                                         <li>Constructor can make multiple objects rather than one with an object literal
                                         </li>
-                                        <li> The prototype can be shared in a public method, but the constructed object will
+                                        <li> The prototype can be shared in a public method, but the constructed object
+                                            will
                                             have closure (Sam Selikoff, 2013)
                                         </li>
                                     </ul>
@@ -116,6 +127,23 @@
                             <h3>Other Info</h3>
                             They have frameworks that replace the native javascript framework for constructors ex.
                             Backbone.js, ember.js, etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="references">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 py-2 px-2">
+                            <h3>References</h3>
+                            <ul>
+                                <li><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">https://addyosmani.com/resources/essentialjsdesignpatterns/book/</a>
+                                </li>
+                                <li><a href="https://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/">https://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/</a>
+                                </li>
+                                <li><a href="http://www.samselikoff.com/blog/some-Javascript-constructor-patterns/">http://www.samselikoff.com/blog/some-Javascript-constructor-patterns/</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
