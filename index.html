@@ -15,13 +15,21 @@
 
 <div class="container-fluid">
     <div class="row flex-xl-nowrap">
-        <div class="col-5 col-md-3 pt-5 bg-dark text-white side-nav">
+        <div class="col-5 col-sm-4 col-md-3 col-lg-2 pt-5 bg-dark-purple text-white side-nav">
             <h3>Navigation</h3>
             <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link text-white">What are Patterns</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Design patterns in JavaScript</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">History & Importance</a></li>
+                <ul class="nav flex-column">
+                    <li class="nav-link"><a href="#constructor" class="nav-link text-white"><strong>About
+                        Patterns</strong></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.0 - What are Patterns</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.1 - Design patterns in
+                        JavaScript</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.3 - History & Importance</a></li>
+                    <hr>
+                    <li class="nav-link"><a href="#constructor" class="nav-link text-white"><strong>Constructor
+                        Pattern</strong></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Uses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Problems it solves</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,10 +64,66 @@
                     the madness”. Design Patterns are trusted, reliable solutions that also assist in creating
                     meaningful conversations between developers.</p>
             </div>
+            <section id="constructor" class="design-pattern mt-5 mb-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="display-4">Constructor Pattern</h2><hr>
+                            <p><strong>Category:</strong> Creational + Builder</p>
+                            <p><strong>Creator:</strong> Richard Cornford and others</p>
+                            <h3>What it is used for</h3>
+                            <p>The constructor pattern is used to create unique type of objects with certain traits. It
+                                prepares the object for use allowing to pass arguments where the constructor can set the
+                                values of the properties and methods to make a new object.
+                                “When we call a JavaScript constructor to create an object, all the properties of the
+                                constructor's prototype are then made available to the new object. In this fashion,
+                                multiple Car objects can be created which access the same prototype. “ (Addy Osmani,
+                                2017)
+                            </p>
+                            <h3>Problems it solves</h3>
+                            <p>The Constructor pattern allows us to construct a class-like object in JavaScript which is
+                                a classless language.</p>
+                            <h3>Pros & Cons</h3>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <strong>Pros</strong>
+                                    <ul>
+                                        <li>“Classes” in JavaScript</li>
+                                        <li>Highly efficient when all properties are known</li>
+                                        <li>Any changes affects only that instance</li>
+                                        <li>Makes applications more efficient and structured</li>
+                                        <li>Widely known pattern makes it easy for other developers to understand</li>
+                                        <li>Constructor can make multiple objects rather than one with an object literal
+                                        </li>
+                                        <li> The prototype can be shared in a public method, but the constructed object will
+                                            have closure (Sam Selikoff, 2013)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong>Cons</strong>
+                                    <ul>
+                                        <li>Any changes affects only that instance</li>
+                                        <li>Performance issues compared to other patterns</li>
+                                        <li>If the new keyword is not used or forgotten variables will be created in the
+                                            global scope and won’t behave as expected
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>Other Info</h3>
+                            They have frameworks that replace the native javascript framework for constructors ex.
+                            Backbone.js, ember.js, etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
 </div>
-
 
 
 </main>

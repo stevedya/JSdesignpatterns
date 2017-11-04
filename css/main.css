@@ -1,10 +1,21 @@
+h1, h2, h3, h4, h5 {
+    letter-spacing: 1px;
+}
+.bg-dark-purple {
+    background-color: #2b264a;
+}
+.design-pattern {
+    background-color: #eaeaea;
+    border-radius: 10px;
+}
 .nav-link {
     padding: .5rem 0;
 }
 .side-nav {
-	height: 100vh;
+    max-height: 100%;
 	position: sticky;
 	z-index: 1000;
+    box-flex:  0;
 }
 .header-bg {
 	background: url('../img/header.jpg');
