@@ -1,5 +1,9 @@
 h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
+    font-family: 'Poly', serif;;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 #references {
     border-radius: 10px;
