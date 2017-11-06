@@ -23,15 +23,8 @@
                 <ul class="nav flex-column">
                     <li class="nav-link"><a href="#about" class="nav-link text-white"><strong>About
                         Patterns</strong></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.0 - What are Patterns</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.1 - Design patterns in
-                        JavaScript</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white"> 1.3 - History & Importance</a></li>
-                    <hr>
                     <li class="nav-link"><a href="#constructor" class="nav-link text-white"><strong>Constructor
                         Pattern</strong></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Uses</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Problems it solves</a></li>
                 </ul>
             </nav>
         </div>
@@ -78,8 +71,8 @@
             <section id="constructor" class="design-pattern mt-5 mb-5">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
-                            <h2 class="display-4">Constructor Pattern</h2>
+                        <div class="col-12 pb-3">
+                            <h2 class="display-4 mt-3">Constructor Pattern</h2>
                             <hr>
                             <p><strong>Category:</strong> Creational + Builder</p>
                             <p><strong>Creator:</strong> Richard Cornford and others</p>
@@ -129,6 +122,44 @@
                             <h3>Other Info</h3>
                             They have frameworks that replace the native javascript framework for constructors ex.
                             Backbone.js, ember.js, etc.</p>
+
+                            <form id="constructor-form" class="">
+                                <h4>Pizza Creator</h4>
+                                <p>This form will create a pizza object with properties. Enter your toppings.</p>
+                                <div class="form-group">
+                                    <label for="name">Pizza Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Name your pizza">
+                                </div>
+                                <div class="form-group">
+                                    <label for="crust">Crust</label>
+                                    <select class="form-control" id="crust">
+                                        <option>Thin</option>
+                                        <option>Regular</option>
+                                        <option>Deep Dish</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="size">Size</label>
+                                    <select class="form-control" id="size">
+                                        <option>Small</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <label for="topping1">Topping 1</label>
+                                <input type="text" class="form-control" id="topping1" placeholder="Topping One">
+                            </div>
+                            <div class="form-group">
+                                <label for="topping2">Pizza Name</label>
+                                <input type="text" class="form-control" id="topping2" placeholder="Topping Two">
+                            </div>
+                            <div class="form-group">
+                                <label for="topping3">Pizza Name</label>
+                                <input type="text" class="form-control" id="topping3" placeholder="Topping Three">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
