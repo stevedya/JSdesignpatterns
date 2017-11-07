@@ -21,20 +21,22 @@
             <h3>Navigation</h3>
             <nav>
                 <ul class="nav flex-column">
-                    <li class="nav-link"><a href="#about" class="nav-link text-white"><strong>About
-                        Patterns</strong></a></li>
-                    <li class="nav-link"><a href="#constructor" class="nav-link text-white"><strong>Constructor
-                        Pattern</strong></a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link text-white">About
+                        Patterns</a></li>
+                    <li class="nav-item"><a href="#constructor" class="nav-link text-white">Constructor
+                        Pattern</a></li>
+                    <li class="nav-item"><a href="#example" class="nav-link text-white">Example</a></li>
                 </ul>
             </nav>
         </div>
         <div class="col-md-9 pt-5 px-5">
-            <div class="jumbotron jumbotron-fluid header-bg px-2">
-                <h1 class="display-3 text-white">Design Patterns</h1>
+            <div class="jumbotron jumbotron-fluid header-bg px-2 text-center">
+                <h1 class="display-2 text-white">Design Patterns</h1>
                 <p class="lead text-white">A easy guide to design patterns in JavaScript</p>
             </div>
             <section id="about">
                 <div class="px-2">
+                    <h2 class="display-4">About Patterns</h2>
                     <hr>
                     <h2> What are patterns</h2>
                     <p>Patterns are tried and tested reusable techniques that assist in solving common programming
@@ -115,56 +117,67 @@
                                         <li>If the new keyword is not used or forgotten variables will be created in the
                                             global scope and won’t behave as expected
                                         </li>
+                                        <li>Functions inside of constructors are created with each instance which can hinder performance.</li>
                                     </ul>
                                 </div>
                             </div>
-
                             <h3>Other Info</h3>
                             They have frameworks that replace the native javascript framework for constructors ex.
                             Backbone.js, ember.js, etc.</p>
-
-                            <form id="constructor-form" class="">
-                                <h4>Pizza Creator</h4>
-                                <p>This form will create a pizza object with properties. Enter your toppings.</p>
-                                <div class="form-group">
-                                    <label for="name">Pizza Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Name your pizza">
-                                </div>
-                                <div class="form-group">
-                                    <label for="crust">Crust</label>
-                                    <select class="form-control" id="crust">
-                                        <option>Thin</option>
-                                        <option>Regular</option>
-                                        <option>Deep Dish</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="size">Size</label>
-                                    <select class="form-control" id="size">
-                                        <option>Small</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
-                                    </select>
-                                </div>
-                            </form>
-                            <div class="form-group">
-                                <label for="topping1">Topping 1</label>
-                                <input type="text" class="form-control" id="topping1" placeholder="Topping One">
-                            </div>
-                            <div class="form-group">
-                                <label for="topping2">Pizza Name</label>
-                                <input type="text" class="form-control" id="topping2" placeholder="Topping Two">
-                            </div>
-                            <div class="form-group">
-                                <label for="topping3">Pizza Name</label>
-                                <input type="text" class="form-control" id="topping3" placeholder="Topping Three">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="references">
+
+            <section class="example" id="example">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="display-4">Example</h2>
+                            <hr>
+                        </div>
+                    </div>
+                    <form id="pizza-form" class="col-xs-12 col-sm-6 p-3">
+                        <h4 class="text-center">Pizza Creator</h4>
+
+                        <p>This form will create a pizza object with properties. Enter your toppings.</p>
+                        <div class="form-group">
+                            <label for="name">Pizza Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name your pizza">
+                        </div>
+                        <div class="form-group">
+                            <label for="crust">Crust</label>
+                            <select class="form-control" id="crust">
+                                <option>Thin</option>
+                                <option>Regular</option>
+                                <option>Deep Dish</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Size</label>
+                            <select class="form-control" id="size">
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="topping1">Topping 1</label>
+                            <input type="text" class="form-control" id="topping1" placeholder="Topping One">
+                        </div>
+                        <div class="form-group">
+                            <label for="topping2">Pizza Name</label>
+                            <input type="text" class="form-control" id="topping2" placeholder="Topping Two">
+                        </div>
+                        <div class="form-group">
+                            <label for="topping3">Pizza Name</label>
+                            <input type="text" class="form-control" id="topping3" placeholder="Topping Three">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+            <section id="references mt-2">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 py-2 px-2">
@@ -192,12 +205,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
