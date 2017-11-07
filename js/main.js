@@ -39,6 +39,7 @@
         }
 
         createPizzaElement(pizzas);
+        console.log(pizzas);
     });
 
     //Inserting pizza into html

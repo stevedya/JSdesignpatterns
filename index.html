@@ -16,20 +16,22 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-5 col-sm-4 col-md-3 col-lg-2 pt-5 bg-dark-purple text-white side-nav">
-            <h3>Navigation</h3>
-            <nav>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="#about" class="nav-link text-white">About
-                        Patterns</a></li>
-                    <li class="nav-item"><a href="#constructor" class="nav-link text-white">Constructor
-                        Pattern</a></li>
-                    <li class="nav-item"><a href="#example" class="nav-link text-white">Example</a></li>
-                </ul>
+    <div class="row flex-md-wrap">
+        <div class="col-sm-12 col-md-3 col-lg-2 pt-5 bg-dark-purple text-white side-nav">
+            <nav class="pb-sm-5">
+                <a class="navbar-brand text-white" href="#">Navigation</a>
+                <div id="navDropdown">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#about" class="nav-link text-white">About
+                            Patterns</a></li>
+                        <li class="nav-item"><a href="#constructor" class="nav-link text-white">Constructor
+                        </a></li>
+                        <li class="nav-item"><a href="#example" class="nav-link text-white">Example</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
-        <div class="col-md-9 pt-5 px-5">
+        <div class="col-md-9 pt-5 px-3">
             <div class="jumbotron jumbotron-fluid header-bg px-2 text-center">
                 <h1 class="display-3 text-white">Design Patterns</h1>
                 <p class="lead text-white">A easy guide to design patterns in JavaScript</p>
