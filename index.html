@@ -70,13 +70,13 @@
                 </div>
             </section>
 
-            <section id="constructor" class="design-pattern mt-5 mb-5">
+            <section id="constructor" class="bg-round-borders mt-5 mb-5">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 pb-3">
                             <h2 class="display-4 mt-3">Constructor Pattern</h2>
                             <hr>
-                            <p><strong>Category:</strong> Creational + Builder</p>
+                            <p><strong>Category:</strong> Creation + Builder</p>
                             <p><strong>Creator:</strong> Richard Cornford and others</p>
                             <h3>What it is used for</h3>
                             <p>The constructor pattern is used to create unique type of objects with certain traits. It
@@ -117,7 +117,9 @@
                                         <li>If the new keyword is not used or forgotten variables will be created in the
                                             global scope and won’t behave as expected
                                         </li>
-                                        <li>Functions inside of constructors are created with each instance which can hinder performance.</li>
+                                        <li>Functions inside of constructors are created with each instance which can
+                                            hinder performance.
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -137,46 +139,54 @@
                             <hr>
                         </div>
                     </div>
-                    <form id="pizza-form" class="col-xs-12 col-sm-6 p-3">
-                        <h4 class="text-center">Pizza Creator</h4>
+                    <div class="row">
+                        <form id="pizza-form" class="col-xs-12 col-sm-6 p-3 mt-3">
+                            <h4 class="text-center">Pizza Creator</h4>
 
-                        <p>This form will create a pizza object with properties. Enter your toppings.</p>
-                        <div class="form-group">
-                            <label for="name">Pizza Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name your pizza">
+                            <p>This form will create a pizza object with properties. Enter your toppings.</p>
+                            <div class="form-group">
+                                <label for="name">Pizza Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name your pizza">
+                            </div>
+                            <div class="form-group">
+                                <label for="crust">Crust</label>
+                                <select class="form-control" id="crust">
+                                    <option>Thin</option>
+                                    <option>Regular</option>
+                                    <option>Deep Dish</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="size">Size</label>
+                                <select class="form-control" id="size">
+                                    <option>Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="topping1">Topping 1</label>
+                                <input type="text" class="form-control" id="topping1" placeholder="Topping One">
+                            </div>
+                            <div class="form-group">
+                                <label for="topping2">Pizza Name</label>
+                                <input type="text" class="form-control" id="topping2" placeholder="Topping Two">
+                            </div>
+                            <div class="form-group">
+                                <label for="topping3">Pizza Name</label>
+                                <input type="text" class="form-control" id="topping3" placeholder="Topping Three">
+                            </div>
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                        </form>
+                        <div class="col-12 col-sm-6">
+                            <div class="row" id="pizzas">
+                                <!--where the pizzas go-->
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="crust">Crust</label>
-                            <select class="form-control" id="crust">
-                                <option>Thin</option>
-                                <option>Regular</option>
-                                <option>Deep Dish</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="size">Size</label>
-                            <select class="form-control" id="size">
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="topping1">Topping 1</label>
-                            <input type="text" class="form-control" id="topping1" placeholder="Topping One">
-                        </div>
-                        <div class="form-group">
-                            <label for="topping2">Pizza Name</label>
-                            <input type="text" class="form-control" id="topping2" placeholder="Topping Two">
-                        </div>
-                        <div class="form-group">
-                            <label for="topping3">Pizza Name</label>
-                            <input type="text" class="form-control" id="topping3" placeholder="Topping Three">
-                        </div>
-                        <button type="submit" class="btn btn-primary submit">Submit</button>
-                    </form>
+                    </div>
                 </div>
             </section>
+
             <section id="references mt-2">
                 <div class="container-fluid">
                     <div class="row">
@@ -203,7 +213,24 @@
 </main>
 
 
-<!-- Optional JavaScript -->
+<!-- Template Handlebars Import-->
+<script src="js/vendor/handlebars-v4.0.11.js"></script>
+
+<!-- The Template -->
+<script id="pizzas-template" type="text/x-handlebars-template">
+    {{#each pizza}}
+    <div class="col-6 mt-3">
+        <div class="bg-round-borders p-3">
+            <h4 class="text-center">{{name}}</h4>
+            <p><strong>Size:</strong>{{size}}</p>
+            <p><strong>Crust:</strong>{{crust}}</p>
+            <p><strong>topping 1:</strong>{{topping1}}</p>
+            <p><strong>topping 2:</strong>{{topping2}}</p>
+            <p><strong>topping 3:</strong>{{topping3}}</p>
+        </div>
+    </div>
+    {{/each}}
+</script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/vendor/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"

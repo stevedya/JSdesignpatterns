@@ -28,6 +28,7 @@
 
         //create new pizza object using constructor
         newPizza = new Pizza(name, crust, size, topping1, topping2, topping3);
+
         //limits the total amount of pizza's to 4 and pushes the oldest one out and newest on top
         if (pizzas.length < 4) {
             pizzas.push(newPizza);
@@ -37,13 +38,13 @@
             pizzas.unshift(newPizza);
         }
 
-        createPizzaElement();
+        createPizzaElement(pizzas);
         console.log(pizzas);
     });
 
     //Inserting pizza into html
-    function createPizzaElement() {
-        $pizzasDiv.html(Handlebars.compile($('#pizzas-template').html())({ pizzas: pizzas }));
+    function createPizzaElement(pizzas) {
+        $pizzasDiv.html(Handlebars.compile($('#pizzas-template').html())({pizza: pizzas }));
     };
 
 
