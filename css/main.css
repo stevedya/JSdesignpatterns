@@ -34,7 +34,9 @@ body {
     border-radius: 10px;
 
 }
-#pizza-form {
-    background: #eaeaea;
+.round-corners {
     border-radius: 10px;
+}
+pre {
+    overflow: auto;
 }

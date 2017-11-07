@@ -31,7 +31,7 @@
         </div>
         <div class="col-md-9 pt-5 px-5">
             <div class="jumbotron jumbotron-fluid header-bg px-2 text-center">
-                <h1 class="display-2 text-white">Design Patterns</h1>
+                <h1 class="display-3 text-white">Design Patterns</h1>
                 <p class="lead text-white">A easy guide to design patterns in JavaScript</p>
             </div>
             <section id="about">
@@ -131,7 +131,7 @@
                 </div>
             </section>
 
-            <section class="example" id="example">
+            <section class="example my-3" id="example">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form id="pizza-form" class="col-xs-12 col-sm-6 p-3 mt-3">
+                        <form id="pizza-form" class="col-xs-12 col-sm-6 p-3 my-3 bg-round-borders">
                             <h4 class="text-center">Pizza Creator</h4>
 
                             <p>This form will create a pizza object with properties. Enter your toppings.</p>
@@ -179,9 +179,69 @@
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
                         <div class="col-12 col-sm-6">
+                            <h4 class="text-center">Created pizzas Below</h4>
                             <div class="row" id="pizzas">
                                 <!--where the pizzas go-->
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 p-5 bg-dark text-white round-corners">
+                            <p class="text-center">Below is the code used to create this simple app using the constructor pattern</p>
+                            <pre class="text-white">
+                                <code>
+var pizzas = [],
+$pizzasDiv = $('#pizzas');
+
+//Create a pizza object with these properties using the constructor pattern
+function Pizza(name, crust, size, topping1, topping2, topping3) {
+
+    //create properties from passed in variables
+    this.name = name;
+    this.crust = crust;
+    this.size = size;
+    this.topping1 = topping1;
+    this.topping2 = topping2;
+    this.topping3 = topping3;
+
+}
+
+$('.submit').on('click', function(e) {
+    e.preventDefault();
+    //get the form values
+    var name = $('#name').val(),
+     crust = $('#crust').val(),
+     size = $('#size').val(),
+     topping1 = $('#topping1').val(),
+     topping2 = $('#topping2').val(),
+     topping3 = $('#topping3').val(),
+
+    //create new pizza object using constructor
+    newPizza = new Pizza(name, crust, size, topping1, topping2, topping3);
+
+    //limits the total amount of pizza's to 4 and pushes the oldest one out and newest on top
+    if (pizzas.length < 4) {
+        pizzas.push(newPizza);
+
+    } else {
+        pizzas.pop(3);
+        pizzas.unshift(newPizza);
+    }
+
+    createPizzaElement(pizzas);
+    console.log(pizzas);
+});
+
+//Inserting pizza into html
+function createPizzaElement(pizzas) {
+    $pizzasDiv.html(Handlebars.compile($('#pizzas-template').html())({pizza: pizzas }));
+};
+                            </code></pre>
                         </div>
                     </div>
                 </div>
@@ -222,11 +282,11 @@
     <div class="col-6 mt-3">
         <div class="bg-round-borders p-3">
             <h4 class="text-center">{{name}}</h4>
-            <p><strong>Size:</strong>{{size}}</p>
-            <p><strong>Crust:</strong>{{crust}}</p>
-            <p><strong>topping 1:</strong>{{topping1}}</p>
-            <p><strong>topping 2:</strong>{{topping2}}</p>
-            <p><strong>topping 3:</strong>{{topping3}}</p>
+            <p><strong>Size: </strong>{{size}}</p>
+            <p><strong>Crust: </strong>{{crust}}</p>
+            <p><strong>topping 1: </strong>{{topping1}}</p>
+            <p><strong>topping 2: </strong>{{topping2}}</p>
+            <p><strong>topping 3: </strong>{{topping3}}</p>
         </div>
     </div>
     {{/each}}
