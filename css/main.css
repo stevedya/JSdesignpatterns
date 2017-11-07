@@ -6,6 +6,15 @@ h1, h2, h3, h4, h5 {
 body {
     font-family: 'Lato', sans-serif;
 }
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    margin-left: 16px;
+}
+
 #references {
     border-radius: 10px;
 }
@@ -16,9 +25,7 @@ body {
     background-color: #eaeaea;
     border-radius: 10px;
 }
-.nav-link {
-    padding: .5rem 0;
-}
+
 .side-nav {
     max-height: 100%;
 	position: sticky;
